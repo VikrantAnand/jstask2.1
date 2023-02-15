@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container my-3">
+    <h2 class="text-center head1">Javascript Task 2</h2>
+    <button type="button" id="addBtn" class="btn btn-primary myBtn" onclick="addRow()">Add Data</button>
+  </div>
+  <div class="container table-responsive">
+  <form action="" id="myForm" onsubmit="return saveTable(event)">
+    <table id="table1" class="table bg-white table-hover table-sm">
+      <thead class="text-white">
+        <tr style="background-color: #6c7ae0;">
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>Subject</th>
+          <th>Marks</th>
+          <th class="text-center">Result</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody1">
+        <tr>
+          <td class="srNo">1</td>
+          <td><input pattern="[a-zA-Z ]{1,20}" title="Alphabets Only max 20" class="nameC" type="text" value="Vikrant" required></td>
+          <td><input pattern="[a-zA-Z ]{1,40}" title="Alphabets Only max 40" class="subjectC" type="text" value="Maths" required></td>
+          <td><input class="marksC" type="number" value="100" min="0" max="100" ></td>
+          <td class="resultC"><button type="button" class="btn btn-primary">Pass</button>
+            <button type="button" class="btn btn-danger">Fail</button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="srNo">2</td>
+          <td><input pattern="[a-zA-Z ]{1,20}" title="Alphabets Only max 20" class="nameC" type="text" value="Vikrant" required></td>
+          <td><input pattern="[a-zA-Z ]{1,40}" title="Alphabets Only max 40" class="subjectC" type="text" value="Hindi" required></td>
+          <td><input class="marksC" type="number" value="90" min="0" max="100" required></td>
+          <td class="resultC"><button type="button" class="btn btn-primary">Pass</button>
+            <button type="button" class="btn btn-danger">Fail</button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="srNo">3</td>
+          <td><input pattern="[a-zA-Z ]{1,20}" title="Alphabets Only max 20" class="nameC" type="text" value="Sharad" required></td>
+          <td><input pattern="[a-zA-Z ]{1,40}" title="Alphabets Only max 40" class="subjectC" type="text" value="English" required></td>
+          <td><input class="marksC" type="number" value="80" min="0" max="100" required></td>
+          <td class="resultC"><button type="button" class="btn btn-primary">Pass</button>
+            <button type="button" class="btn btn-danger">Fail</button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="srNo">4</td>
+          <td><input pattern="[a-zA-Z ]{1,20}" title="Alphabets Only max 20" class="nameC" type="text" value="Manyu" required></td>
+          <td><input pattern="[a-zA-Z ]{1,40}" title="Alphabets Only max 40" class="subjectC" type="text" value="Maths" required></td>
+          <td><input class="marksC" type="number" value="20" min="0" max="100" required></td>
+          <td class="resultC"><button type="button" class="btn btn-primary">Pass</button>
+            <button type="button" class="btn btn-danger">Fail</button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="srNo">5</td>
+          <td><input pattern="[a-zA-Z ]{1,20}" title="Alphabets Only max 20" class="nameC" type="text" value="Ritesh" required></td>
+          <td><input pattern="[a-zA-Z ]{1,40}" title="Alphabets Only max 40" class="subjectC" type="text" value="Hindi" required></td>
+          <td><input class="marksC" type="number" value="100" min="0" max="100" required></td>
+          <td class="resultC"><button type="button" class="btn btn-primary">Pass</button>
+            <button type="button" class="btn btn-danger">Fail</button>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <button type="submit" class="btn btn-primary myBtn">Save Data</button>
+    </div>
+  </form>
+  </div>
+  <div class="container mt-3">
+    <div class="searchBar mb-3">
+      <input size="30" class="" type="search" placeholder="Search name or subject" aria-label="Search" id="searchInput" onkeyup="searchFunction()">
+    </div>
+    <table id="table2" class="table bg-white table-hover table-sm">
+    </table>
+  </div>
+</body>
+<script src="./main.js"></script>
+</html>

@@ -1,0 +1,60 @@
+body
+{
+background-color: #c4d3f6;
+}
+#table1{
+box-shadow: 1px 2px 3px 3px  #839acf;
+}
+.myBtn{
+  background-color: #0a1b97;
+}
+.head1{
+  color:#071583;
+}
+#searchInput{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 642px;
+}
+#table1 input{
+    width: 100%;
+    display: inline-block;
+    border-radius: 4px;
+}
+button{
+    margin-bottom: 1px;
+}
+.resultC{
+    text-align: center;
+}
+#table2{
+    counter-reset: section;
+}
+.count:before {
+    counter-increment: section;
+    content: counter(section);
+}
+@media screen and (max-width:991px) {
+    table button{
+        width: 100%;
+    }
+    #searchInput{
+        width: 100%;
+    }
+}
+@media screen and (max-width:425px) {
+    #table1 th ,#table1 td{
+        display: block;
+        width: 100%;
+    }
+    table th ,#table2 td {
+        text-align: center;
+    }
+    #table2 tbody tr{
+        border-bottom: 1px solid black;
+    }
+    #table1 th{
+        display: none;
+    }
+}
